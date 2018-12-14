@@ -1,0 +1,6 @@
+FROM python:3.7
+WORKDIR /app
+ADD requirements_dev.txt /app/
+ADD entry.sh /app/
+RUN pip install -r requirements_dev.txt
+ENTRYPOINT ["/bin/bash", "entry.sh"]
